@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viralframe — AI-Powered Animated Video Pipeline</title>
+  <meta name="description" content="Turn story ideas into 10 minutes of consistent animated video. Characters that look the same in every frame. Ready in days, not months.">
+  <meta property="og:title" content="Viralframe — Story In. Animation Out.">
+  <meta property="og:description" content="The AI pipeline that turns a story idea into consistent long-form animated video.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='url(%23g)'/%3E%3Cpolygon points='12,8 12,24 26,16' fill='white'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B5CF6'/%3E%3Cstop offset='1' stop-color='%23EC4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-counter text-gradient">000</div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-icon">▶</span>
+        <span>VIRALFRAME</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#showcase" class="nav-link">Results</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#comparison" class="nav-link">Pricing</a>
+        <a href="#waitlist" class="nav-btn">Claim Your Spot</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-gradient-mesh" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Private Alpha — 50 Founding Creator Spots
+      </div>
+
+      <h1 class="hero-title" id="hero-title">
+        Story In.<br>
+        <span class="hero-title-gradient">Animation Out.</span>
+      </h1>
+
+      <p class="hero-subtitle" id="hero-subtitle">
+        Tell us your story. Get 10 minutes of consistent animated video — characters that actually look the same in every frame.
+      </p>
+
+      <div class="hero-ctas" id="hero-ctas">
+        <a href="#showcase" class="btn btn-primary">See the Results</a>
+        <a href="#waitlist" class="btn btn-secondary">Claim Your Spot</a>
+      </div>
+
+      <div class="hero-proof" id="hero-proof">
+        <div class="hero-proof-avatars">
+          <div class="hero-proof-avatar" style="background: linear-gradient(135deg, #8B5CF6, #EC4899);"></div>
+          <div class="hero-proof-avatar" style="background: linear-gradient(135deg, #06B6D4, #8B5CF6);"></div>
+          <div class="hero-proof-avatar" style="background: linear-gradient(135deg, #EC4899, #F59E0B);"></div>
+        </div>
+        <span class="hero-proof-text">12 creators already in the alpha</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" id="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="hero-scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ====== MARQUEE 1 ====== -->
+  <section class="marquee-section section">
+    <div class="marquee-track primary-track">
+      <h2 class="marquee-text outline-text">GENERATE UNLIMITED ASSETS • NO EXPERTISE REQUIRED • </h2>
+    </div>
+  </section>
+
+  <!-- ====== SHOWCASE ====== -->
+  <section class="section showcase" id="showcase">
+    <div class="container">
+      <div class="section-label">THE PROOF</div>
+      <h2 class="section-title">
+        One character. <span class="text-gradient">Every scene.</span>
+      </h2>
+      <p class="section-subtitle">
+        Same identity across every frame. No drift. No morphing. No surprises. This is what AI video looks like when consistency is solved.
+      </p>
+
+      <div class="showcase-grid">
+        <div class="showcase-card glow-effect">
+          <div class="showcase-card-inner glow-effect-inner">
+            <img src="assets/scene-cyberpunk.png" alt="Character in cyberpunk city" loading="lazy">
+            <div class="showcase-card-label">Neon District</div>
+          </div>
+        </div>
+        <div class="showcase-card glow-effect">
+          <div class="showcase-card-inner glow-effect-inner">
+            <img src="assets/showcase-lab.png" alt="Character in laboratory" loading="lazy">
+            <div class="showcase-card-label">Research Lab</div>
+          </div>
+        </div>
+        <div class="showcase-card glow-effect">
+          <div class="showcase-card-inner glow-effect-inner">
+            <img src="assets/showcase-alley.png" alt="Character in rain-soaked alley" loading="lazy">
+            <div class="showcase-card-label">Back Alley</div>
+          </div>
+        </div>
+        <div class="showcase-card glow-effect">
+          <div class="showcase-card-inner glow-effect-inner">
+            <img src="assets/showcase-rooftop.png" alt="Character on rooftop at sunset" loading="lazy">
+            <div class="showcase-card-label">Rooftop Sunset</div>
+          </div>
+        </div>
+        <div class="showcase-card glow-effect">
+          <div class="showcase-card-inner glow-effect-inner">
+            <img src="assets/scene-forest.png" alt="Character in mystical forest" loading="lazy">
+            <div class="showcase-card-label">Ancient Forest</div>
+          </div>
+        </div>
+        <div class="showcase-card glow-effect">
+          <div class="showcase-card-inner glow-effect-inner">
+            <img src="assets/character-sheet.png" alt="Character reference sheet" loading="lazy">
+            <div class="showcase-card-label">Reference Sheet</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-callout">
+        <span class="showcase-callout-icon">🔒</span>
+        <p>Character identity is locked in the image layer — before a single second of video is generated.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MARQUEE 2 ====== -->
+  <section class="marquee-section section">
+    <div class="marquee-track reverse-track">
+      <h2 class="marquee-text outline-text">THE HOLLYWOOD STUDIO IN YOUR BROWSER • </h2>
+    </div>
+  </section>
+
+  <!-- ====== THE PROBLEM ====== -->
+  <section class="section problem" id="problem">
+    <div class="container">
+      <div class="section-label">THE REALITY</div>
+      <h2 class="section-title">
+        AI video breaks the moment you need <span class="text-gradient">consistency</span>
+      </h2>
+      <p class="section-subtitle">
+        Current AI tools generate beautiful individual clips. But string them into a story, and everything falls apart.
+      </p>
+
+      <div class="problem-comparison">
+        <div class="problem-side problem-bad glow-effect">
+          <div class="problem-side-label">
+            <span class="problem-label-icon">✕</span>
+            Every other AI video tool
+          </div>
+          <div class="problem-items">
+            <div class="problem-item">
+              <div class="problem-item-title">Your hero is a different person in every scene</div>
+              <p>Different face, different hair, different outfit. You can't build a story when the audience doesn't recognise the main character.</p>
+            </div>
+            <div class="problem-item">
+              <div class="problem-item-title">Faces melt between cuts</div>
+              <p>Uncanny warping and morphing that immediately breaks immersion. The "AI look" that audiences hate.</p>
+            </div>
+            <div class="problem-item">
+              <div class="problem-item-title">The art style changes every 5 seconds</div>
+              <p>Lighting shifts, palettes swap, rendering style jumps from painterly to photorealistic mid-scene.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="problem-divider">
+          <div class="problem-divider-line"></div>
+          <span class="problem-divider-label">VS</span>
+          <div class="problem-divider-line"></div>
+        </div>
+
+        <div class="problem-side problem-good glow-effect">
+          <div class="problem-side-label">
+            <span class="problem-label-icon">✓</span>
+            With Viralframe
+          </div>
+          <img src="assets/consistency-proof.png" alt="Character consistency comparison — without vs with Viralframe" class="problem-proof-image" loading="lazy">
+          <p class="problem-good-desc">Every keyframe generated with full character references. Every frame approved before a single second of video is created.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-label">HOW IT WORKS</div>
+      <h2 class="section-title">
+        Three steps. <span class="text-gradient">One finished video.</span>
+      </h2>
+      <p class="section-subtitle">
+        You handle the creative vision. We handle everything else.
+      </p>
+
+      <div class="steps">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-connector">
+            <div class="step-number-ring">
+              <span class="step-number">01</span>
+            </div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <div class="step-content">
+              <h3>Tell your story</h3>
+              <p>Chat with an AI creative director that captures everything — genre, characters, world, tone. It asks the questions you didn't think of and doesn't stop until every creative decision is front-loaded.</p>
+              <div class="step-meta">
+                <span class="step-tag">⏱ 30–60 min conversation</span>
+                <span class="step-tag">🛡 You approve the brief</span>
+              </div>
+            </div>
+            <div class="step-visual">
+              <div class="step-chat-mockup glow-effect">
+                <div class="chat-bubble chat-ai">What's your story about?</div>
+                <div class="chat-bubble chat-user">A cyberpunk detective investigating AI art heists in Neo-Tokyo…</div>
+                <div class="chat-bubble chat-ai">Great premise. What's the detective's most distinctive visual feature? I need anchors to keep her consistent across 89 frames.</div>
+                <div class="chat-bubble chat-user">Blue hair with a silver streak, glowing violet cybernetic eye</div>
+                <div class="chat-bubble chat-ai chat-typing">
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-connector">
+            <div class="step-number-ring">
+              <span class="step-number">02</span>
+            </div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <div class="step-content">
+              <h3>Approve the storyboard</h3>
+              <p>Character reference sheets are generated first — turnaround views, expressions, action poses. Then every keyframe is produced with full references. 4 variants each, best one picked. You approve everything before any video renders.</p>
+              <div class="step-meta">
+                <span class="step-tag">🎯 4 variants per frame</span>
+                <span class="step-tag">🛡 You approve every keyframe</span>
+              </div>
+            </div>
+            <div class="step-visual">
+              <div class="step-storyboard">
+                <img src="assets/storyboard.png" alt="Visual storyboard with approved keyframes" loading="lazy" class="step-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step-connector">
+            <div class="step-number-ring">
+              <span class="step-number">03</span>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-content">
+              <h3>Get your video</h3>
+              <p>88 clips generated in parallel. Colour-graded with a project-wide LUT. Cross-faded at scene breaks. Encoded to 1080p H.264. A 10-minute, YouTube-ready MP4 — delivered in 2–4 days.</p>
+              <div class="step-meta">
+                <span class="step-tag">📐 1080p · 24fps · H.264</span>
+                <span class="step-tag">⏱ 2–4 day turnaround</span>
+              </div>
+            </div>
+            <div class="step-visual">
+              <div class="output-player glow-effect">
+                <div class="output-player-bar">
+                  <div class="output-player-dot red"></div>
+                  <div class="output-player-dot yellow"></div>
+                  <div class="output-player-dot green"></div>
+                  <span>my_story_final.mp4</span>
+                </div>
+                <div class="output-player-screen">
+                  <img src="assets/scene-cyberpunk.png" alt="Final rendered video preview" loading="lazy">
+                  <div class="output-player-controls">
+                    <span class="output-play-btn">▶</span>
+                    <div class="output-progress-bar">
+                      <div class="output-progress-fill"></div>
+                    </div>
+                    <span class="output-time">10:24</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== COMPARISON ====== -->
+  <section class="section comparison" id="comparison">
+    <div class="container">
+      <div class="section-label">THE VALUE</div>
+      <h2 class="section-title">
+        Animation without the <span class="text-gradient">animation budget</span>
+      </h2>
+      <p class="section-subtitle">
+        What used to cost tens of thousands and take months can now be done in days.
+      </p>
+
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <div class="comp-header">
+                  <span class="comp-icon">🎨</span>
+                  <span>Traditional<br>Animation</span>
+                </div>
+              </th>
+              <th>
+                <div class="comp-header">
+                  <span class="comp-icon">👤</span>
+                  <span>Freelance<br>Animator</span>
+                </div>
+              </th>
+              <th>
+                <div class="comp-header">
+                  <span class="comp-icon">🤖</span>
+                  <span>DIY<br>Runway / Kling</span>
+                </div>
+              </th>
+              <th class="comp-highlight">
+                <div class="comp-header">
+                  <span class="comp-icon">▶</span>
+                  <span>Viralframe</span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="comp-row-label">Cost (10 min video)</td>
+              <td>$15,000+</td>
+              <td>$3,000–5,000</td>
+              <td>Free (your time)</td>
+              <td class="comp-highlight"><strong>~$310</strong></td>
+            </tr>
+            <tr>
+              <td class="comp-row-label">Turnaround</td>
+              <td>2–3 months</td>
+              <td>3–6 weeks</td>
+              <td>2+ weeks of prompting</td>
+              <td class="comp-highlight"><strong>2–4 days</strong></td>
+            </tr>
+            <tr>
+              <td class="comp-row-label">Character consistency</td>
+              <td>✅ Perfect</td>
+              <td>✅ Perfect</td>
+              <td><span class="comp-bad">❌ Broken</span></td>
+              <td class="comp-highlight"><strong>✅ Locked</strong></td>
+            </tr>
+            <tr>
+              <td class="comp-row-label">Revisions</td>
+              <td>Expensive & slow</td>
+              <td>Limited rounds</td>
+              <td>Start over</td>
+              <td class="comp-highlight"><strong>Built-in at every stage</strong></td>
+            </tr>
+            <tr>
+              <td class="comp-row-label">Control over output</td>
+              <td>Full</td>
+              <td>Partial</td>
+              <td>Minimal</td>
+              <td class="comp-highlight"><strong>Full — approve before render</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comparison-callouts">
+        <div class="comparison-callout">
+          <span class="callout-value" data-target="50" data-suffix="×">0</span>
+          <span class="callout-label">cheaper than traditional animation</span>
+        </div>
+        <div class="comparison-callout">
+          <span class="callout-value" data-target="30" data-suffix="×">0</span>
+          <span class="callout-label">faster than hiring a freelancer</span>
+        </div>
+        <div class="comparison-callout">
+          <span class="callout-value" data-target="100" data-suffix="%">0</span>
+          <span class="callout-label">character consistency — no drift</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA / WAITLIST ====== -->
+  <section class="section cta" id="waitlist">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-orb" aria-hidden="true"></div>
+        <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
+
+        <div class="cta-spots">
+          <span class="cta-spots-count" id="spots-count">38</span>
+          <span class="cta-spots-label">of 50 founding spots remaining</span>
+        </div>
+
+        <h2 class="cta-title">Be a founding creator.</h2>
+
+        <p class="cta-subtitle">
+          First access to the pipeline. Priority support. Direct input on the roadmap. Limited to 50 creators for the alpha.
+        </p>
+
+        <form class="cta-form" id="waitlist-form">
+          <input type="email" placeholder="your@email.com" required class="cta-input" id="waitlist-email" autocomplete="email">
+          <button type="submit" class="btn btn-primary cta-submit">Claim Your Spot</button>
+        </form>
+
+        <div class="cta-success" id="waitlist-success" style="display: none;">
+          <span class="cta-success-icon">✓</span>
+          <p>You're in. We'll be in touch within 48 hours.</p>
+        </div>
+
+        <p class="cta-note">No spam. No newsletters. Just your alpha invite when it's ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo-icon">▶</span>
+        <span>VIRALFRAME</span>
+      </div>
+      <p class="footer-text">© 2026 Viralframe. AI-powered animated video pipeline.</p>
+      <a href="mailto:contact@viralframe.xyz" class="footer-contact">contact@viralframe.xyz</a>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
