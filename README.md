@@ -20,12 +20,12 @@ After pushing the repository to GitHub:
 2. Under `Build and deployment`, set `Source` to `Deploy from a branch`.
 3. Select branch `main` and folder `/(root)`.
 4. Save.
-5. In the same Pages screen, set the custom domain to `viralframe.ai`.
+5. In the same Pages screen, set the custom domain to `viralframe.xyz`.
 6. Enable HTTPS after DNS has propagated.
 
-## DNS for viralframe.ai
+## DNS for viralframe.xyz
 
-For the apex domain `viralframe.ai`, point `@` to GitHub Pages using either:
+For the apex domain `viralframe.xyz`, point `@` to GitHub Pages using either:
 
 - `A` records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - or an `ALIAS`/`ANAME` record to `iosifboanca.github.io`
